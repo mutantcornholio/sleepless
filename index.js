@@ -14,7 +14,7 @@ if (query.url) {
 function updateUrl() {
     var url = urlInput.value;
     daFrame.src = url;
-    window.history.pushState({}, 'url', window.location.pathname.replace(/\/+$/, "") + '?url=' + encodeURIComponent(url));
+    window.history.pushState({}, 'url', window.location.pathname.replace(/\/+$/, "") + '/?url=' + encodeURIComponent(url));
 }
 
 button.addEventListener('click', updateUrl);
